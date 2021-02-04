@@ -1,0 +1,9 @@
+此工程为高速版本的daplink，是在官方daplink源码基础上移植到stmf205rct6上，使用stm32f205的高速USB_OTG外设，外挂USB3300作为USBPHY。
+软件烧录说明：
+PCB正面左上方有四个呈菱形排列的焊盘，傍边有注释，对应为V：3.3V，G：GND，D：SWDIO，C：SWCLK。
+keil工程位于software\projectfiles\stm32f205xc\bl下，可以直接编译后烧写到板子上。
+可以用使用编译好的software\projectfiles\stm32f205xc\bl\Objects\stm32f103.hex来烧写。
+烧写完后拔插下USB线就好弹出一U盘
+这时将编译好的software\projectfiles\stm32f205xc\target_stm32f103_if\Objects\stm32f103.hex复制到此U盘下。
+等待程序烧写，烧写完后可能需要拔插下USB线。
+至此高速DAPLINK制作完成，尽情享用吧。
